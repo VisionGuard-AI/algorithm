@@ -1,5 +1,5 @@
-from Blocks import *
-from util.pos_embed import get_2d_sincos_pos_embed
+from Pretrain.Blocks import *
+from utils.pos_embed import get_2d_sincos_pos_embed
 
 # generator
 class Masked_ConViT_GAN_Generator(nn.Module):
