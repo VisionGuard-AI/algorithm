@@ -1,7 +1,7 @@
 from Pretrain.Blocks import *
 from utils.pos_embed import get_2d_sincos_pos_embed
 
-# generator
+# generator·
 class Masked_ConViT_GAN_Generator(nn.Module):
     '''
     Generator based on Masked Autoencoder with backbone ConViT
@@ -14,7 +14,7 @@ class Masked_ConViT_GAN_Generator(nn.Module):
         decoder_embed(Linear) - decoder_blocks(Block) - decoder_norm(LayerNorm) - decoder_pred(Linear)
 
     '''
-    def __init__(self, img_size=64, patch_size=16, in_chans=3, num_classes=1, embed_dim=1024, depth=24,
+    def __init__(self, img_size=128, patch_size=16, in_chans=3, num_classes=1, embed_dim=1024, depth=24,
                  num_heads=16, mlp_ratio=4., qkv_bias=False, qk_scale=None, drop_rate=0., attn_drop_rate=0.,
                  drop_path_rate=0., norm_layer=nn.LayerNorm, local_up_to_layer=10, locality_strength=1.,
                  use_pos_embed=True, decoder_embed_dim=512, decoder_depth=8, decoder_num_heads=16, norm_pix_loss=False):
